@@ -1,0 +1,166 @@
+/*SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+       10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px 75px;
+  background-color: #e7f5ff;
+}
+
+.container {
+  padding: 30px 40px;
+  background-color: #74c0fc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline {
+  grid-column: 3 / 4;
+  grid-row: -3 / -1;
+}
+
+.bg-blue {
+  background-color: #e7f5ff;
+}
+
+.p2 {
+  padding: 2em;
+}
+
+.mb1 {
+  margin-bottom: 1em;
+}
+
+.pd1 {
+  padding-bottom: 1em;
+}
+
+.bd-bt {
+  border-bottom: 1px solid #a5d8ff;
+}
+
+.strong-title {
+  color: #1864ab;
+  display: flex;
+  font-size: 24px;
+  border-bottom: 1px solid #74c0fc;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.primary-icon {
+  width: 44px;
+  height: auto;
+}
+
+.goals-icon,
+.team-icon {
+  width: 24px;
+  height: auto;
+}
+
+.timeline-number {
+  padding: 10px;
+  background-color: #e5dbff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* MEDIA */
+@media (max-width: 500px) {
+  body {
+    margin: 0;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .flex-text-center {
+    display: flex;
+    align-items: center;
+  } */
+
+  .timeline-number {
+    width: 44px;
+    height: 44px;
+  }
+
+  .primary-icon {
+    width: 30px;
+    height: auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .scopes {
+    grid-row: 2;
+  }
+
+  .goals-icon,
+  .team-icon {
+    text-align: center;
+  }
+
+  .p2 {
+    padding: 3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .timeline-number {
+    width: 44px;
+    height: 44px;
+  }
+
+  .scopes {
+    grid-row: 2;
+  }
+}
